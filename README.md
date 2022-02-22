@@ -3,12 +3,13 @@
 The superstonk terminal is merely a pretty visualization of a stock. To be used for pretty graphical terminal output.
 This project is created due to learning golang, and the code base will change over time.
 
+![PRE](./gifs/pre.gif)
 ## Usage
 
 Install the binary from <https://github.com/bjarneo/superstonk/releases>, or go directly to the build the binary manually step.
 
 ```bash
-$ superstonk
+$ superstonk -interval 10 -shares 10
 ```
 
 ### The default values
@@ -39,18 +40,9 @@ Air: [<https://github.com/cosmtrek/air>](https://github.com/cosmtrek/air)
 ## Build the binary manually
 
 ```bash
+$ go build
 
-# Docs
-# https://golang.org/doc/install/source#environment
-
-# Linux
-env GOOS=linux GOARCH=386 go build -o build/superstonk -v main.go
-
-# OSX
-env GOOS=darwin GOARCH=amd64 go build -o build/superstonk -v main.go
-
-# Windows
-env GOOS=windows GOARCH=amd64 go build -o build/superstonk.exe -v main.go
+# will be available as superstonk
 ```
 
 ## Need a fully fledged awesome terminal?
