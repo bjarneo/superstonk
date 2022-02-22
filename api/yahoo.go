@@ -53,7 +53,10 @@ func Quote(symbol string) QuoteStructure {
 
 	var quote QuoteResponse
 
-	json.Unmarshal(respData, &quote)
+	jsonErr := json.Unmarshal(respData, &quote)
+	if jsonErr != nil {
+		log.Fatal(jsonErr)
+	}
 
 	return quote.QuoteResponse.Result[0]
 }
