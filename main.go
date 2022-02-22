@@ -32,6 +32,8 @@ func main() {
 
 		price := msg.StockPrice(stock.Price(), stock.PriceState())
 
+		utils.TerminalTitle(*symbol, stock.Price())
+
 		statistics := msg.Statistics(stock, *shares)
 
 		area.Update(price + statistics)
