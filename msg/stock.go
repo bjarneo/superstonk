@@ -60,7 +60,7 @@ func Statistics(stock api.QuoteStructure, shares float64) string {
 	if shares > 0 {
 		out = append(
 			out,
-			template("Your share value", fmt.Sprintf("%.2f %s", shares*stock.Price(), stock.StockCurrency())),
+			template("Your stock value", fmt.Sprintf("%.2f %s", shares*stock.Price(), stock.StockCurrency())),
 		)
 	}
 
