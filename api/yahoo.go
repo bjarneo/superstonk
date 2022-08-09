@@ -91,6 +91,8 @@ func (stock *QuoteStructure) State() string {
 		return "After hours"
 	case "CLOSED":
 		return "Closed"
+	case "PREPRE":
+		return "Closed"
 	default:
 		return "Open"
 	}
